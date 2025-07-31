@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question Prompts</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    #strategy {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      max-width: 100%;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    button:active {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="strategy">Tap the button for a question</div>
+  <button onclick="newStrategy()">New Question</button>
+
+  <script>
+    const strategies = [
+      "What’s stopping you?",
+      "Can you escape?",
+      "Where does it hurt?",
+      "What keeps calling you back?",
+      "What are you looking for?",
+      "What part of your life feels like art?",
+      "What word would you put on a T-shirt that sums you up?",
+      "If today had a title, what would it be?",
+      "What product from your life would you repeat in a Warhol-esque series?",
+      "Who would play you in a shampoo commercial?",
+      "What is the best sandwich?",
+      "What’s the best thing to put ketchup on?",
+      "What would you ban if you were in charge for a day?",
+      "What is the most used app on your phone?",
+      "What places do you carry with you?",
+      "What is your motto?",
+      "When do you lie?",
+      "What would your entrance song be?",
+      "What do you refuse to be quiet about?",
+      "What have you screamed into the dark?",
+      "What do you think happens when we die?",
+      "How would you like to die?",
+      "What’s a song you’d like people to hear at your funeral?",
+      "Describe the rest of your life in 5 words?",
+      "What would you like to come back as?",
+      "Speak or listen?",
+      "Sunrise or sunset?",
+      "Begin or end?",
+      "Light or shadow?",
+      "Lead or follow?",
+      "Open or closed?",
+      "Know or wonder?",
+      "Question or answer?",
+      "Roots or wings?",
+      "Map or instinct?",
+      "Are you more blueprint or collage?",
+      "Can a mistake be beautiful?",
+      "What sound or noise do you love / hate?",
+      "What silence have you grown to love?",
+      "Where were you the first time you felt far from home?",
+      "What rule would you break just to feel free?",
+      "How can we make things better?",
+      "Is failure progress?",
+      "Can fear be useful?",
+      "Should freedom have a limit?",
+      "What’s one of your favourite restaurants?",
+      "What was the last thing you ate?",
+      "What food would you frame as art?",
+      "What flavour do you carry from childhood?",
+      "What would be your last meal?"
+    ];
+
+    function newStrategy() {
+      const strategy = strategies[Math.floor(Math.random() * strategies.length)];
+      document.getElementById("strategy").textContent = strategy;
+    }
+  </script>
+</body>
+</html>
